@@ -1,0 +1,22 @@
+.form {
+  padding: 10px;
+}
+
+.buttonDiv {
+  margin-left: 10px;
+}
+
+.links {
+  list-style-type: none;
+  margin: 10px;
+  padding: 5px;
+}
+
+.list {
+  display: inline;
+  padding: 8px;
+}
+
+.navigationBar {
+  background-color: #dddddd;
+}
