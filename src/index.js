@@ -19,12 +19,15 @@ const data = {
       text: 'React',
       url: 'https://reactjs.org/',
     }
+  },
+  icon: {
+    likedIconUrl: 'https://i.imgur.com/6cjqKy3.png', 
+    unlikedIconUrl: 'https://i.imgur.com/DYHVKQm.png',
   }
   
 };
 
 ReactDOM.render(
-  <App data = {data}/>,
+  <App data={data}/>,
   document.getElementById('my-jsx-element')
 );
-

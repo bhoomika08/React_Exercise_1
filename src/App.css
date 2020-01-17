@@ -1,3 +1,7 @@
+*{
+  text-align: center;
+}
+
 .form {
   padding: 10px;
 }
@@ -19,4 +23,61 @@
 
 .navigationBar {
   background-color: #dddddd;
+}
+
+.iconContainer {
+  margin: 0 auto;
+  width: 100px;
+  height: 50px;
+}
+
+.align-vertical {
+  vertical-align: middle;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+span {
+  margin-left: 15px;
+}
+
+.unliked {
+  color: gray;
+}
+
+.liked {
+  color: blue;
+}
+
+.timerContainer {
+  margin: 0 auto;
+  width: 400px;
+  height: 200px;
+  border-style: groove;
+}
+
+.reset{
+  margin-left: 10px;
+  background: orange;
+}
+
+.play {
+  background: #f44336;
+}
+
+.btn {
+  min-width: 72px;
+  outline: none;
+  border: 0;
+  padding: 10px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+.paused{
+  background: #50c950;
 }
