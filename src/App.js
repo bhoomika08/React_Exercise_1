@@ -6,6 +6,7 @@ import NavigationBar from './navigationBar';
 import LikeButton from './like_unlike.js';
 import Timer from './timer.js';
 import PomodoroClock from './pomodoro_clock.js';
+import UserLogin from './forgot_password.js'
 
 
 class App extends React.Component {
@@ -18,6 +19,7 @@ class App extends React.Component {
         <LikeButton icon={this.props.data.icon}/>
         <Timer />
         <PomodoroClock />
+        <UserLogin />
       </div>
     );
   }
