@@ -5,6 +5,7 @@ import FormMessage from './formMessage.js';
 import NavigationBar from './navigationBar';
 import LikeButton from './like_unlike.js';
 import Timer from './timer.js';
+import PomodoroClock from './pomodoro_clock.js';
 
 
 class App extends React.Component {
@@ -16,6 +17,7 @@ class App extends React.Component {
         <FormMessage />
         <LikeButton icon={this.props.data.icon}/>
         <Timer />
+        <PomodoroClock />
       </div>
     );
   }

@@ -1,9 +1,10 @@
 import React from 'react';
+import {formatTime} from './helper.js'
 
 function Countdown(props) {
 	return (
 		<h1>
-			{props.time}
+			{formatTime(props.time)}
 		</h1>
 	);
 };
@@ -16,7 +17,6 @@ function Reset(props) {
 		</button>
 	);
 };
-
 
 // Pause/ play button
 class Control extends React.Component {
@@ -50,7 +50,6 @@ class TimerInput extends React.Component {
   }
 }
 
-
 class Timer extends React.Component {
 	constructor(props) {
 		super(props);
@@ -67,25 +66,25 @@ class Timer extends React.Component {
 	}
   
   tick = () => {
-    if(this.state.timer === 0) {
+    if(!this.state.timer) {
       clearInterval( this.interval)
     } else {
-      this.setState({ timer : this.state.timer - 1 });
+      this.setState({ timer: this.state.timer - 1 });
     }
   }
   
 	startTimer = () => {
 		this.interval = setInterval(this.tick,1000);
-    this.setState({ paused : false });
+    this.setState({ paused: false });
 	}
   
   stopTimer = () => {
   	clearInterval( this.interval );
-    this.setState({ paused : true });
+    this.setState({ paused: true });
 	}
   
   reset = () => {
-  	this.setState({ timer : `${this.state.startTime}`, paused: true });
+  	this.setState({ timer: `${this.state.startTime}`, paused: true });
     clearInterval( this.interval );
   }
   
@@ -99,6 +98,7 @@ class Timer extends React.Component {
 	render() {
 		return (
 			<div className="timerContainer">
+        <h5>Timer</h5>
         <TimerInput time={this.state.time} handleTimeChange={this.handleChange}/>
 				<Countdown time={this.state.timer} />
         <Control
