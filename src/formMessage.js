@@ -17,10 +17,9 @@ class FormMessage extends React.Component {
     this.setState({[name]: target.value});
   }
 
-  handleSubmit(event) {
+  handleSubmit() {
     this.setState({message: ''});
     alert('Message Entered: ' + this.state.message);
-    event.preventDefault();
   }
 
   render() {
